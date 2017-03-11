@@ -1,0 +1,156 @@
+--
+-- Table structure for table `autoresponder`
+--
+
+CREATE TABLE IF NOT EXISTS `autoresponder` (
+  `aid` int(11) NOT NULL AUTO_INCREMENT,
+  `asubject` varchar(250) DEFAULT NULL,
+  `amessage` text,
+  `aday` int(5) DEFAULT NULL,
+  `sent` int(11) NOT NULL DEFAULT '0',
+  `topad` varchar(10) NOT NULL DEFAULT 'off',
+  `bottomad` varchar(10) NOT NULL DEFAULT 'off',
+  PRIMARY KEY (`aid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `autoresponder`
+--
+
+INSERT INTO `autoresponder` (`aid`, `asubject`, `amessage`, `aday`, `sent`, `topad`, `bottomad`) VALUES
+(1, '~firstname~, here''s your chance to make 100% profit by simply giving away freebies.', '<p>Hi ~firstname~,<br /><br />How would you like to make money by simply giving away freebies?<br /><br />I''m not talking about making 50% or 75% commission. I''m talking about 100%!!<br /><br />Interested? Here''s how it works......<br /><br />All you have to do is send people to [Your Website URL]?r=PaypalEmail (where PaypalEmail is your full Paypal email) for a free copy of [Your Product].<br /><br />When they purchase our One Time Special Offer, you will keep 100% of the sales.<br /><br />I do all the leg work, you keep all the money. It''s that simple.<br /><br />It''s time to make some quick cash now!<br /><br />Simply send traffic to [Your Website URL]?r=YourPaypalEmail<br /><br />If you don''t have a Paypal account, get it free at <a href="http://www.paypal.com" target="" name="">www.paypal.com</a>.<br /><br />To your success,<br />[Your Name]</p>', 0, 0, 'off', 'off'),
+(2, '~firstname~, I have a free gift for you.', '<p>Hi ~firstname~,<br /><br />[Your Name] here.<br /><br />I have prepared a gift for you. <br /><br />[Prepare a high value gift for your subscriber]<br /><br />To your success,<br />[Your Name]<font size="2"><br style="font-family: Arial;" /></font></p>', 1, 0, 'off', 'off'),
+(3, '~firstname~, no traffic? No problem! Here''s the solution......', '<p>Hi ~firstname~,</p>\r\n<p>Have you heard of LeadsLeap? If you do, have you heard of LeadsLeap 2.0?</p>\r\n<p>If you haven''t, I suggest that you take a look at it now.</p>\r\n<p>3 things I like about the system:</p>\r\n<p>1) Unlike most traffic system, this program has no timer.</p>\r\n<p>Forget about viewing ads for 10 or 20 seconds. You get paid for every 5 seconds of surfing an ad.</p>\r\n<p>If an ad is interesting, keep on reading and get paid more. If an ad is boring, just close it.</p>\r\n<p>2) It comes with a 10-level leads builder.</p>\r\n<p>Well, you must have heard it before. If you refer 10 people and everyone you refer refers another 10 people, you''ll end up with millions of people at the 10th level.</p>\r\n<p>Most of these systems won''t work because there is no value creation in the process. Only spam.</p>\r\n<p>LeadsLeap provides a lot of useful tools and trainings for its members. It even shares its revenue with all its members. That''s how it retains its members and hence your leads.</p>\r\n<p>Moreover, it has a unique communication system that allows you to reach out to your 10-levels of leads unobtrusively.</p>\r\n<p>If fact, it pays your 10-level of leads to read your message!</p>\r\n<p>3) Everyone can advertise and get traffic</p>\r\n<p>Yes, there is a paid option. But even as a Free member, you are allowed to post 3 ads and have your ads shown in thousands of websites in its network.</p>\r\n<p>There are a lot of values in LeadsLeap membership, and it''s free.<br /><br /> http://www.leadsleap.com/?r=[your-leadsleap-username]<br /><br /> To your success,<br /> [Your Name]</p>\r\n<p>P.S. Don''t pre-judge this program. Find out how it works and see how viral and sustainable it can be.</p>\r\n<p>http://www.leadsleap.com/?r=[your-leadsleap-username]</p>', 2, 0, 'off', 'off'),
+(4, '~firstname~, I''ve a free report for you - One Signup A Day Strategy', '<p>Hi {firstname},</p>\r\n<p>I have a special report for you today.</p>\r\n<p>It''s called "One Signup A Day Strategy".</p>\r\n<p>No optin needed. No gimmick.</p>\r\n<p>Simply download the pdf file and learn the tricks.</p>\r\n<p>http://www.leadsleap.com/1signupaday/?r=[your-leadsleap-username]</p>\r\n<p>To your success,<br />[Name]</p>\r\n<p>P.S. Wait till you see how simple this strategy is, you won''t believe it.</p>\r\n<p>http://www.leadsleap.com/1signupaday/?r=[your-leadsleap-username]</p>', 3, 0, 'off', 'off');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `banners`
+--
+
+CREATE TABLE IF NOT EXISTS `banners` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `bannerurl` varchar(120) NOT NULL DEFAULT '',
+  `targeturl` varchar(120) NOT NULL DEFAULT '',
+  `status` tinyint(4) NOT NULL DEFAULT '0',
+  `impressions` int(11) NOT NULL DEFAULT '0',
+  `clicks` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `banners`
+--
+
+INSERT INTO `banners` (`id`, `bannerurl`, `targeturl`, `status`, `impressions`, `clicks`) VALUES
+(1, 'http://www.leadsleap.com/images/banner_468x60.gif', 'http://www.leadsleap.com', 1, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `emailad`
+--
+
+CREATE TABLE IF NOT EXISTS `emailad` (
+  `adid` int(11) NOT NULL AUTO_INCREMENT,
+  `admessage` text,
+  `adstatus` varchar(10) NOT NULL,
+  PRIMARY KEY (`adid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `emailad`
+--
+
+INSERT INTO `emailad` (`adid`, `admessage`, `adstatus`) VALUES
+(1, '<table style="border-color: #eeeeee; background-color: #eeeeee; width: 100%; padding: 10px;">\r\n<tbody>\r\n<tr>\r\n<td style="text-align: center;">\r\n<p><strong>One Time Effort, Lifetime Leads</strong></p>\r\n<p><a href="../../">Check out this excellent leads generation program here!</a></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>&nbsp;</p>', 'on'),
+(2, '<table style="border-color: #eeeeee; background-color: #eeeeee; width: 100%;">\r\n<tbody>\r\n<tr>\r\n<td style="text-align: center;">\r\n<p><span style="text-decoration: underline;"><strong>Make Instant Cash Giving Away Freebies</strong></span><br /><br />Simply give away our free [Product Name] and keep 100% commission on our OTO sales. All sales go directly into your Paypal account.</p>\r\n<p>Here''s your affiliate link:<br /> <a href="http://www.yourdomain.com/?r=YourPaypalEmail" target="" name="">http://www.yourdomain.com/?r=YourPaypalEmail</a></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>&nbsp;</p>', 'on');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pages`
+--
+
+CREATE TABLE IF NOT EXISTS `pages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(25) NOT NULL DEFAULT '',
+  `htmlcode` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+
+--
+-- Dumping data for table `pages`
+--
+
+INSERT INTO `pages` (`id`, `name`, `htmlcode`) VALUES
+(1, 'homepagetop', '<p style="text-align: center;"><span style="color: #cc0000;"><strong><span style="font-size: 24pt;">"This Is Your Headline"</span></strong></span></p>\r\n<div style="text-align: center;"><span style="color: #5c5a5a;"><strong><span style="font-size: 18pt;">This is your subheadline</span></strong></span></div>\r\n<p>&nbsp;</p>\r\n<p>Dear Friend,</p>\r\n<p>Your sales copy that explains why your visitors should get a copy of your free gift.</p>'),
+(2, 'homepagebottom', '<p>To Your Success,<br />[Your Name]<br /><br />PS:<br /><br />PPS:<font size="3"><br /></font></p>'),
+(5, 'otopagebottom', '<p>Regards,<br />[Your Name]</p>'),
+(6, 'otopagecall', '<div style="text-align: center;"><span style="color: #cc0000;"><strong><span style="font-size: 14pt;">Yes, I want to secure this special offer now and I fully understand that this is the only chance I can get it at such a low price!!</span></strong></span></div>'),
+(3, 'homepagecall', '<div style="text-align: center;"><span style="color: #cc0000; font-size: 14pt;"><strong>Simply fill in your name and email to </strong></span></div>\r\n<div style="text-align: center;"><span style="color: #cc0000; font-size: 14pt;"><strong>get instant download now!</strong></span></div>'),
+(4, 'otopagetop', '<div style="text-align: center;"><strong><span style="color: #cc0000; font-size: 24pt;"> Wait!</span></strong><br /><strong> <span style="color: #cc0000; font-size: 14pt;">Before Going To The Download Page, I''ve A Special Offer For You!</span></strong><br /> <br /> <span style="background-color: #ffff00; color: #cc0000; font-size: 14pt;">This is a one time offer. You will never see it again. </span><br /><span style="background-color: #ffff00; color: #cc0000; font-size: 14pt;"> So please read it carefully.</span></div>\r\n<div style="text-align: center;">&nbsp;</div>\r\n<div style="text-align: center;"><br /> <strong><span style="font-size: 24pt;">Your Headline Here!</span></strong><br /> &nbsp;\r\n<div style="text-align: left;">Dear Friend,<br /> <br /> Your OTO sales letter here.....<span style="font-family: Tahoma; font-size: small;"><br /></span></div>\r\n</div>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `settings`
+--
+
+CREATE TABLE IF NOT EXISTS `settings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(30) NOT NULL DEFAULT '',
+  `setting` varchar(120) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=26 ;
+
+--
+-- Dumping data for table `settings`
+--
+
+INSERT INTO `settings` (`id`, `name`, `setting`) VALUES
+(1, 'websiteurl', ''),
+(2, 'sitename', 'Your Domain Name'),
+(3, 'sitetitle', 'Website Title'),
+(4, 'adminid', 'admin'),
+(5, 'adminpassword', 'admin'),
+(6, 'adminemail', 'admin@yourdomain.com'),
+(7, 'adminname', 'Admin Name'),
+(8, 'adminaddress', 'Your physical mailing address'),
+(9, 'leadsleapid', ''),
+(10, 'paypalemail', 'your@paypalemail.com'),
+(11, 'paypalitem', 'Special Offer'),
+(12, 'price', '7'),
+(13, 'lastresponder', '0000-00-00'),
+(14, 'maileremail', 'noreply@yourdomain.com'),
+(15, 'lastmassmail', '0'),
+(16, 'freedownloadurl', ' http://yourdomain.com/freeproduct.zip'),
+(17, 'unsub', '0'),
+(18, 'otodownloadurl', ' http://yourdomain.com/otoproduct.zip'),
+(19, 'throttle', '1'),
+(20, 'exitpopup', 'off'),
+(21, 'exiturl', ''),
+(22, 'exitpopup2', 'off'),
+(23, 'exiturl2', ''),
+(24, 'headerimg', ''),
+(25, 'footerimg', ''),
+(26, 'scode', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `subscribers`
+--
+
+CREATE TABLE IF NOT EXISTS `subscribers` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `firstname` varchar(50) NOT NULL DEFAULT '',
+  `email` varchar(50) NOT NULL DEFAULT '',
+  `verified` tinyint(4) NOT NULL DEFAULT '0',
+  `ip` varchar(30) NOT NULL DEFAULT '',
+  `code` varchar(30) NOT NULL DEFAULT '',
+  `joindate` date NOT NULL DEFAULT '0000-00-00',
+  `nmailout` varchar(11) NOT NULL DEFAULT '-1',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
